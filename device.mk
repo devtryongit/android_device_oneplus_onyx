@@ -210,7 +210,7 @@ PRODUCT_COPY_FILES += \
 
 # Weather providers
 PRODUCT_PACKAGES += \
-    OpenWeatherMapProvider \
+    OpenWeatherMapWeatherProvider \
     YahooWeatherProvider \
     WundergroundWeatherProvider
 
