@@ -56,6 +56,9 @@ KERNEL_TOOLCHAIN_PREFIX := arm-eabi-
 MALLOC_SVELTE := true
 USE_CLANG_PLATFORM_BUILD := true
 
+# Webview defs
+PREBUILT_WEBVIEW_VERSION := chromium
+
 # ANT+
 BOARD_ANT_WIRELESS_DEVICE := "vfs-prerelease"
 
