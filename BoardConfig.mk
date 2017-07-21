@@ -195,4 +195,7 @@ WIFI_DRIVER_FW_PATH_STA          := "sta"
 WIFI_DRIVER_FW_PATH_AP           := "ap"
 WPA_SUPPLICANT_VERSION           := VER_0_8_X
 
+# Fixes Wifi-Mobile Data toggle issue
+MALLOC_SVELTE := true
+
 -include vendor/oneplus/onyx/BoardConfigVendor.mk
