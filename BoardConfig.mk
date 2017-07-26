@@ -36,7 +36,7 @@ TARGET_ARCH := arm
 TARGET_ARCH_VARIANT := armv7-a-neon
 TARGET_CPU_ABI := armeabi-v7a
 TARGET_CPU_ABI2 := armeabi
-TARGET_CPU_VARIANT := cortex-a15
+TARGET_CPU_VARIANT := krait
 
 # Kernel
 BOARD_KERNEL_BASE := 0x00000000
@@ -50,6 +50,10 @@ TARGET_KERNEL_CONFIG := onyx_defconfig
 TARGET_KERNEL_SOURCE := kernel/oneplus/onyx
 KERNEL_TOOLCHAIN := $(ANDROID_BUILD_TOP)/prebuilts/gcc/$(HOST_OS)-x86/arm/arm-eabi-4.8/bin
 KERNEL_TOOLCHAIN_PREFIX := arm-eabi-
+
+# Fixes Wifi-Mobile Data toggle issue
+MALLOC_SVELTE := true
+TARGET_NEEDS_GCC_LIBC := true
 
 # ANT+
 BOARD_ANT_WIRELESS_DEVICE := "vfs-prerelease"
@@ -194,8 +198,5 @@ TARGET_USES_WCNSS_MAC_ADDR_REV   := true
 WIFI_DRIVER_FW_PATH_STA          := "sta"
 WIFI_DRIVER_FW_PATH_AP           := "ap"
 WPA_SUPPLICANT_VERSION           := VER_0_8_X
-
-# Fixes Wifi-Mobile Data toggle issue
-MALLOC_SVELTE := true
 
 -include vendor/oneplus/onyx/BoardConfigVendor.mk
