@@ -55,6 +55,15 @@ KERNEL_TOOLCHAIN_PREFIX := arm-eabi-
 MALLOC_SVELTE := true
 USE_CLANG_PLATFORM_BUILD := true
 
+ifneq ($(HOST_OS),darwin)
+SDCLANG := true
+SDCLANG_PATH := prebuilts/clang/linux-x86/host/sdclang-3.8/bin
+SDCLANG_LTO_DEFS := device/qcom/common/sdllvm-lto-defs.mk
+endif
+
+# Use Snapdragon LLVM Compiler
+TARGET_USE_SDCLANG := true
+
 # ANT+
 BOARD_ANT_WIRELESS_DEVICE := "vfs-prerelease"
 
