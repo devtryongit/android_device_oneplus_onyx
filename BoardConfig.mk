@@ -53,7 +53,7 @@ KERNEL_TOOLCHAIN_PREFIX := arm-eabi-
 
 # Fixes Wifi-Mobile Data toggle issue
 MALLOC_SVELTE := true
-TARGET_NEEDS_GCC_LIBC := true
+USE_CLANG_PLATFORM_BUILD := true
 
 # ANT+
 BOARD_ANT_WIRELESS_DEVICE := "vfs-prerelease"
