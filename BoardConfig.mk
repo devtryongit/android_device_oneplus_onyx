@@ -55,7 +55,6 @@ KERNEL_TOOLCHAIN_PREFIX := arm-eabi-
 TARGET_USE_SDCLANG := true
 
 # Fixes Wifi-Mobile Data toggle issue
-USE_CLANG_PLATFORM_BUILD := true
 MALLOC_SVELTE := true
 TARGET_NEEDS_GCC_LIBC := true
 
