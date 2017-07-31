@@ -51,18 +51,19 @@ TARGET_KERNEL_SOURCE := kernel/oneplus/onyx
 KERNEL_TOOLCHAIN := $(ANDROID_BUILD_TOP)/prebuilts/gcc/$(HOST_OS)-x86/arm/arm-eabi-4.8/bin
 KERNEL_TOOLCHAIN_PREFIX := arm-eabi-
 
+# Use Snapdragon LLVM Compiler
+TARGET_USE_SDCLANG := true
+
 # Fixes Wifi-Mobile Data toggle issue
-MALLOC_SVELTE := true
 USE_CLANG_PLATFORM_BUILD := true
+MALLOC_SVELTE := true
+TARGET_NEEDS_GCC_LIBC := true
 
 ifneq ($(HOST_OS),darwin)
 SDCLANG := true
 SDCLANG_PATH := prebuilts/clang/linux-x86/host/sdclang-3.8/bin
 SDCLANG_LTO_DEFS := device/qcom/common/sdllvm-lto-defs.mk
 endif
-
-# Use Snapdragon LLVM Compiler
-TARGET_USE_SDCLANG := true
 
 # ANT+
 BOARD_ANT_WIRELESS_DEVICE := "vfs-prerelease"
