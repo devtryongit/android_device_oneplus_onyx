@@ -58,12 +58,6 @@ TARGET_USE_SDCLANG := true
 MALLOC_SVELTE := true
 TARGET_NEEDS_GCC_LIBC := true
 
-ifneq ($(HOST_OS),darwin)
-SDCLANG := true
-SDCLANG_PATH := prebuilts/clang/linux-x86/host/sdclang-3.8/bin
-SDCLANG_LTO_DEFS := device/qcom/common/sdllvm-lto-defs.mk
-endif
-
 # ANT+
 BOARD_ANT_WIRELESS_DEVICE := "vfs-prerelease"
 
