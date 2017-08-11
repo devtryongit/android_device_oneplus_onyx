@@ -107,6 +107,7 @@ ifeq ($(HOST_OS),linux)
     endif
   endif
 endif
+DONT_DEXPREOPT_PREBUILTS := true
 
 # Filesystem
 BOARD_FLASH_BLOCK_SIZE := 131072
