@@ -103,7 +103,7 @@ TARGET_TAP_TO_WAKE_NODE := "/proc/touchpanel/double_tap_enable"
 ifeq ($(HOST_OS),linux)
   ifeq ($(call match-word-in-list,$(TARGET_BUILD_VARIANT),user),true)
     ifeq ($(WITH_DEXPREOPT_BOOT_IMG_ONLY),)
-      WITH_DEXPREOPT_BOOT_IMG_ONLY := true
+      WITH_DEXPREOPT := true
     endif
   endif
 endif
