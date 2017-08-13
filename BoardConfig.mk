@@ -52,8 +52,6 @@ TARGET_KERNEL_SOURCE := kernel/oneplus/onyx
 KERNEL_TOOLCHAIN := $(ANDROID_BUILD_TOP)/prebuilts/gcc/$(HOST_OS)-x86/arm/arm-eabi-4.8/bin
 KERNEL_TOOLCHAIN_PREFIX := arm-eabi-
 
-# Fixes Wifi-Mobile Data toggle issue
-MALLOC_SVELTE := true
 USE_CLANG_PLATFORM_BUILD := true
 
 # Webview defs
